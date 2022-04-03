@@ -26,7 +26,7 @@ resource "aws_security_group" "shipSafe_client_sec" {
       from_port   = 3000
       to_port     = 3000
       protocol    = "tcp"
-      cidr_blocks = [var.kkodes_home_ip]
+      cidr_blocks = ["0.0.0.0/0"]
     }
   ]
 
@@ -34,7 +34,7 @@ resource "aws_security_group" "shipSafe_client_sec" {
     from_port   = 0
     to_port     = 65535
     protocol    = "tcp"
-    cidr_blocks = [var.kkodes_home_ip]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   tags = {
